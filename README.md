@@ -16,10 +16,10 @@ Linux Admin Cheat Sheet
 ---
 
 * while true; do clear; tail -100 /var/log/httpd/access_log | awk '{print $2}'  | uniq -c | sort -nr| head -10; sleep 2;  done
-  - The uniq command in Linux and Unix is used for removing duplicate lines from a file. Use option '-c' to get the count of repeated lines.
+  - The **uniq** command in Linux is used for removing duplicate lines from a file. Use option '-c' to get the count of repeated lines.
 
 ###  Realtime counting number of files currently open by Java application
 ---
 
-* watch 'cd /proc/$(pidof java/fd && ls -l | wc -l'
+* watch 'cd /proc/$(pidof java)/fd && ls -l | wc -l'
   
