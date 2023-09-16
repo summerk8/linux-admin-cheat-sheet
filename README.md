@@ -21,5 +21,5 @@ Linux Admin Cheat Sheet
 ###  Realtime counting number of files currently open by Java application
 ---
 
-* watch "cd /proc/$(pidof java/fd && ls -l | wc -l"
+* watch 'cd /proc/$(pidof java/fd && ls -l | wc -l'
   
