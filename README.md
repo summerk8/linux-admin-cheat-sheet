@@ -9,10 +9,10 @@ Linux Admin Cheat Sheet
   - [Realtime monitoring](#Realtime-monitoring)
 
 
-# Realtime monitoring
+## Realtime monitoring
 ---
 
-##  Count unique IP adresses with Apache
+###  Count unique IP adresses with Apache
 ---
 
 * while true; do clear; tail -100 /var/log/httpd/access_log | awk '{print $2}'  | uniq -c | sort -nr| head -10; sleep 2;  done
