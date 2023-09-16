@@ -6,20 +6,10 @@ Linux Admin Cheat Sheet
 
 - [Linux Admin Cheat Sheet](#linux-admin-cheat-sheet)
   - [Table Of Contents](#table-of-contents)
-  - [Age](#age)
-  - [Apache](#apache)
-  - [Asdf](#asdf)
-  - [Bash](#bash)
-  - [Boot](#boot)
+  - [Realtime Count unique IP adresses with Apache](#Realtime-Count-unique-IP-adresses-with-Apache)
 
 
-## Boot
+## Realtime Count unique IP adresses with Apache
 ---
 
-* 6 Levels to booting
-    - BIOS
-    - MBR
-    - GRUB
-    - Kernel
-    - Init
-    - Runlevel
+while true; do clear; tail -100 /var/log/httpd/access_log | awk '{print $2}'  | uniq -c | sort -nr| head -10; sleep 2;  done
